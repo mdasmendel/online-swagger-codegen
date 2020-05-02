@@ -1,0 +1,47 @@
+{
+  "name": "online-swagger-codegen",
+  "version": "0.0.1",
+  "description": "An online swagger client generator",
+  "main": "lib/build-lient.js",
+  "types": "lib/build-lient.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest --config jestconfig.json",
+    "prepare" : "yarn build",
+    "prepublishOnly" : "yarn test && yarn lint",
+    "preversion" : "yarn lint",
+    "version" : "yarn format && git add -A src",
+    "postversion" : "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdasmendel/online-swagger-codegen.git"
+  },
+  "keywords": ["swagger", "codegen", "online"],
+  "author": "Dascal Mihai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdasmendel/online-swagger-codegen/issues"
+  },
+  "homepage": "https://github.com/mdasmendel/online-swagger-codegen#readme",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.4",
+    "jest": "^25.5.4",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.4.0",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  }
+}
