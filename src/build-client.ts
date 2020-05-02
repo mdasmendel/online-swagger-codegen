@@ -10,19 +10,17 @@ export interface IGeneratorOptions {
   spec?: string;
   specURL?: string;
   client?: ClientType;
-  outPath?: string;
+  outPath: string;
 }
 
-const defaultOptions: IGeneratorOptions = {
-  client: ClientType.TYPESCRIPT_NODE,
-};
+const defaultClient = ClientType.TYPESCRIPT_NODE;
 
 export const GenerateSDK = async (options: IGeneratorOptions) => {
   if (!options.spec && !options.specURL) {
     throw new Error('at least one of spec or specURL should be provided');
   }
 
-  options.client = options.client || defaultOptions.client;
+  options.client = options.client || defaultClient;
 
   let swaggerSpec = options.spec;
   if (options.specURL) {
