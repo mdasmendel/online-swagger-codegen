@@ -1,6 +1,6 @@
 {
   "name": "online-swagger-codegen",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "An online swagger client generator",
   "main": "lib/build-client.js",
   "types": "lib/build-client.d.ts",

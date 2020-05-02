@@ -4,6 +4,7 @@ import * as Path from 'path';
 
 export enum ClientType {
   TYPESCRIPT_NODE = 'typescript-node',
+  TYPESCRIPT_ANGULAR = 'typescript-angular',
 }
 
 export interface IGeneratorOptions {
