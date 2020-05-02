@@ -1,7 +1,7 @@
 # Online swagger codegen
 An online swagger client generator
 
-This package generate from your swagger JSON file the desired client using `https://generator.swagger.io/api/gen/clients` 
+This package generate a zip folder (sdk.zip) from your swagger JSON file and the desired client using `https://generator.swagger.io/api/gen/clients` 
 endpoint. 
 
 ## Installation
