@@ -29,7 +29,7 @@ export const GenerateSDK = async (options: IGeneratorOptions) => {
     swaggerSpec = data;
   }
 
-  let response = await Axios.post('https://generator.swagger.io/api/gen/clients/typescript-node', {
+  let response = await Axios.post(`https://generator.swagger.io/api/gen/clients/${options.client}`, {
     spec: swaggerSpec,
   });
   response = await Axios.get(response.data.link, {
