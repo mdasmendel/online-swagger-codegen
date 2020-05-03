@@ -1,6 +1,6 @@
 {
   "name": "online-swagger-codegen",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An online swagger client generator",
   "main": "lib/build-client.js",
   "types": "lib/build-client.d.ts",
@@ -12,17 +12,21 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
     "test": "jest --config jestconfig.json",
-    "prepare" : "yarn build",
-    "prepublishOnly" : "yarn test && yarn lint",
-    "preversion" : "yarn lint",
-    "version" : "yarn format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn test && yarn lint",
+    "preversion": "yarn lint",
+    "version": "yarn format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mdasmendel/online-swagger-codegen.git"
   },
-  "keywords": ["swagger", "codegen", "online"],
+  "keywords": [
+    "swagger",
+    "codegen",
+    "online"
+  ],
   "author": "Dascal Mihai",
   "license": "MIT",
   "bugs": {
